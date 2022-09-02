@@ -5,7 +5,7 @@ class Participant:
     self.choice = ''
 
   def choose(self):
-    self.choice = input('{name}, select rock, paper or scissor: '.format(name = self.name))
+    self.choice = input('{name}, select rock, paper, scissor, lizard, spock: '.format(name = self.name))
     print("{name} selects {choice}".format(name = self.name, choice = self.choice))
 
   def numericalChoice(self):
@@ -13,6 +13,8 @@ class Participant:
       'rock': 0,
       'paper': 1,
       'scissor': 2,
+      "lizard": 3,
+      "spock": 4
     }
     return switcher[self.choice]
 
@@ -25,9 +27,11 @@ class GameRound:
     p2.choose()
 
     self.rules = [
-      [0, -1, 1],
-      [1, 0, -1],
-      [-1, 1, 0]
+      [0, -1, 1, 1, -1],
+      [1, 0, -1, -1, 1],
+      [-1, 1, 0, 1, -1],
+      [-1, 1, -1, 0, 1],
+      [1, -1, 1, -1, 0]
     ]
 
     result = self.compareChoices(p1,p2)
