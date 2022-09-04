@@ -137,3 +137,38 @@ class Square:
     else:
       raise Exception("Value must be larger than 0")
 ```
+
+# Build an AI web app by using Python and Flask
+
+Create Virutal Environment:
+
+```bash
+# Windows
+# Create the environment
+python -m venv venv
+# Activate the environment
+.\venv\scripts\activate
+
+# macOS or Linux
+# Create the environment
+python -m venv venv
+# Activate the environment
+source ./venv/bin/activate
+
+```
+
+## Flask Fundamentals
+
+Typically, the entry point for Flask applications is a file named app.py
+
+To Run Flask Server:
+
+```bash
+# Windows
+set FLASK_ENV=development
+
+# Linux/macOS
+export FLASK_ENV=development
+
+flask run
+```
