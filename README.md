@@ -172,3 +172,38 @@ export FLASK_ENV=development
 
 flask run
 ```
+
+## Testing in python
+
+**unittest** is included in standard python library. Writing tests with the unittest requires importing the module and creating at least one class that inherits from the unittest.TestCase class
+
+```python
+import unittest
+
+class TestAssertion(unittest.TestCase):
+  def test_equals(self):
+    self.assertEqual('one string', 'one string')
+
+if __name__ == 'main'
+  unittest.main()
+```
+
+Another way to run tests with the unittest module is by using it with the Python executable. This time, it isn't necessary to specify the filename because tests can be discovered automatically:
+
+```bash
+python3 -m unittest
+
+or
+
+python3 test_assertions.py
+```
+
+```python
+class TestAccounts(unittest.TestCase):
+
+  def test_creation(self):
+    self.assertTrue(account.create())
+
+  def test_deletion(self):
+    self.assertTrue(account.delete())
+```
